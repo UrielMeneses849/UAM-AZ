@@ -20,7 +20,7 @@ function ProtectedRoute({ role }) {
   if (!ready) return <div className="page-status">Verificando sesión…</div>;
   if (!user) return <Navigate to="/login" replace />;
   if (role && user.role !== role) {
-    return <Navigate to={user.role === "ADMIN" ? "/admin" : "/avisos"} replace />;
+    return <Navigate to={user.role === "ADMIN" ? "/admin" : "/kardex"} replace />;
   }
   return <Outlet />;
 }
@@ -29,7 +29,7 @@ function HomeRedirect() {
   const { user, ready } = useAuth();
   if (!ready) return null;
   if (!user) return <Navigate to="/login" replace />;
-  return <Navigate to={user.role === "ADMIN" ? "/admin" : "/avisos"} replace />;
+  return <Navigate to={user.role === "ADMIN" ? "/admin" : "/kardex"} replace />;
 }
 
 export function App() {

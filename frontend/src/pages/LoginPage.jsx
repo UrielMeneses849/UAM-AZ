@@ -12,7 +12,7 @@ export function LoginPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  if (user) return <Navigate to={user.role === "ADMIN" ? "/admin" : "/avisos"} replace />;
+  if (user) return <Navigate to={user.role === "ADMIN" ? "/admin" : "/kardex"} replace />;
 
   async function submit(event) {
     event.preventDefault();
@@ -20,7 +20,7 @@ export function LoginPage() {
     setError("");
     try {
       const signedIn = await login(username, password);
-      navigate(signedIn.role === "ADMIN" ? "/admin" : "/avisos", { replace: true });
+      navigate(signedIn.role === "ADMIN" ? "/admin" : "/kardex", { replace: true });
     } catch (err) {
       setError(err.message);
     } finally {
