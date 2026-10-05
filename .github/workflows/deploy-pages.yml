@@ -32,6 +32,10 @@ jobs:
         working-directory: frontend
         run: npm ci
 
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v6
+
       - name: Prepare public Supabase configuration
         working-directory: frontend
         run: cp .env.example .env.production
@@ -39,11 +43,9 @@ jobs:
       - name: Build
         working-directory: frontend
         env:
-          VITE_BASE_PATH: /UAM-AZ/
+          VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+          VITE_ROUTER_MODE: hash
         run: npm run build
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v6
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5

@@ -33,7 +33,8 @@ function HomeRedirect() {
 }
 
 export function App() {
-  const Router = import.meta.env.BASE_URL === "/" ? BrowserRouter : HashRouter;
+  const useHashRouter = import.meta.env.VITE_ROUTER_MODE === "hash" || import.meta.env.BASE_URL !== "/";
+  const Router = useHashRouter ? HashRouter : BrowserRouter;
 
   return (
     <Router>
