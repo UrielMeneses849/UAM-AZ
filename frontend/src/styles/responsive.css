@@ -1,0 +1,39 @@
+@media (max-width: 900px) {
+  body { overflow-x: auto; }
+  .site-shell { min-width: 900px; }
+  .legacy-header { height: 70px; padding: 10px 0; }
+  .header-title strong { font-size: 19px; }
+  .legacy-stage { grid-template-columns: 260px minmax(620px, 1fr); gap: 0; }
+  .legacy-sidebar { width: 260px; }
+  .campus-name { font-size: 28px; }
+  .legacy-nav a, .legacy-nav button { padding-left: 48px; }
+  .legacy-content { padding-right: 10px; }
+  .kardex-controls { grid-template-columns: 130px 100px 110px 112px minmax(180px, 1fr) 90px; gap: 5px; }
+  .login-stage { grid-template-columns: 260px minmax(640px, 1fr); gap: 0; }
+  .login-welcome { padding-inline: 0; }
+  .login-panel { min-height: 440px; }
+  .login-notice { min-height: 318px; }
+  .student-edit-grid { grid-template-columns: repeat(2, minmax(180px, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  .site-shell { min-width: 860px; }
+  .simulation-mark { font-size: 10px; }
+  .legacy-stage { grid-template-columns: 235px minmax(600px, 1fr); }
+  .legacy-sidebar { width: 235px; }
+  .section-title { height: 38px; }
+  .legacy-table { font-size: 11px; }
+  .legacy-nav a, .legacy-nav button { min-height: 36px; }
+
+  .site-shell.login-shell { width: 390px; min-width: 390px; }
+  .login-shell .reference-header-title { justify-content: flex-start; align-self: flex-start; }
+  .login-shell .login-stage { grid-template-columns: 260px 130px; }
+  .login-shell .login-welcome { width: 130px; min-width: 130px; }
+  .login-shell .login-message { height: 110px; }
+  .login-shell .login-notice { width: 363.3125px; min-height: 0; margin: 27px 0 0 34.6641px; }
+  .login-shell .scholarship-block { width: 416.6484px; margin: 15.5px 0 0 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}

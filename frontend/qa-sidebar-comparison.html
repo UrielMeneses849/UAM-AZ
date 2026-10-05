@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sidebar Visual QA</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 520px; height: 520px; overflow: hidden; background: #d9d9d9; font-family: Arial, sans-serif; }
+      .labels { height: 26px; display: grid; grid-template-columns: 260px 260px; color: #fff; background: #222; font-size: 11px; line-height: 26px; text-align: center; }
+      .comparison { display: grid; grid-template-columns: 260px 260px; }
+      .crop { position: relative; width: 260px; height: 494px; overflow: hidden; background: #fff; }
+      iframe { position: absolute; left: 0; top: -70px; width: 1470px; height: 802px; border: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="labels"><span>REFERENCE</span><span>IMPLEMENTATION</span></div>
+    <div class="comparison">
+      <div class="crop"><iframe src="https://ayamictlan.uam.mx:8443/sae/azc/aewbf001.omuestraframes?mod=1"></iframe></div>
+      <div class="crop"><iframe src="/login"></iframe></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual QA Comparison</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 1470px; min-height: 1220px; overflow-x: hidden; background: #d9d9d9; font-family: Arial, sans-serif; }
+      .labels { height: 26px; display: grid; grid-template-columns: 1fr 1fr; color: #fff; background: #222; font-size: 12px; line-height: 26px; text-align: center; }
+      .comparison { display: grid; grid-template-columns: 735px 735px; }
+      .viewport { width: 735px; height: 401px; overflow: hidden; background: #fff; }
+      iframe { width: 1470px; height: 802px; border: 0; transform: scale(.5); transform-origin: top left; }
+      .detail-labels { height: 26px; margin-top: 8px; display: grid; grid-template-columns: 1fr 1fr; color: #fff; background: #222; font-size: 12px; line-height: 26px; text-align: center; }
+      .details { display: grid; grid-template-columns: 735px 735px; gap: 0; }
+      .notice-detail { position: relative; width: 735px; height: 235px; overflow: hidden; background: #fff; }
+      .notice-detail iframe { position: absolute; left: -297.45px; top: -178.5px; transform: scale(.75); }
+      .sidebar-detail { position: relative; width: 735px; height: 465px; overflow: hidden; background: #fff; }
+      .sidebar-detail iframe { position: absolute; left: 0; top: -70px; transform: none; }
+    </style>
+  </head>
+  <body>
+    <div class="labels"><span>REFERENCE</span><span>IMPLEMENTATION</span></div>
+    <div class="comparison">
+      <div class="viewport"><iframe src="https://ayamictlan.uam.mx:8443/sae/azc/aewbf001.omuestraframes?mod=1"></iframe></div>
+      <div class="viewport"><iframe src="/login"></iframe></div>
+    </div>
+    <div class="detail-labels"><span>NOTICE · REFERENCE</span><span>NOTICE · IMPLEMENTATION</span></div>
+    <div class="details">
+      <div class="notice-detail"><iframe src="https://ayamictlan.uam.mx:8443/sae/azc/aewbf001.omuestraframes?mod=1"></iframe></div>
+      <div class="notice-detail"><iframe src="/login"></iframe></div>
+    </div>
+    <div class="detail-labels"><span>SIDEBAR · REFERENCE</span><span>SIDEBAR · IMPLEMENTATION</span></div>
+    <div class="details">
+      <div class="sidebar-detail"><iframe src="https://ayamictlan.uam.mx:8443/sae/azc/aewbf001.omuestraframes?mod=1"></iframe></div>
+      <div class="sidebar-detail"><iframe src="/login"></iframe></div>
+    </div>
+  </body>
+</html>

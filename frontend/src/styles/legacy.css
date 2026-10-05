@@ -1,0 +1,687 @@
+.site-shell {
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  overflow: hidden;
+}
+
+.legacy-header {
+  height: 70px;
+  background: #fff;
+  border: 0;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.legacy-header-bar {
+  width: 95%;
+  height: 50px;
+  margin: 0 auto;
+  background: #000;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header-identity-space {
+  width: 103px;
+  height: 50px;
+  flex: 0 0 103px;
+  background: #fff;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.08;
+  min-width: 0;
+}
+
+.header-title strong { font-size: 19px; font-weight: 400; }
+.header-title span { font-size: 12px; font-weight: 700; }
+
+.simulation-mark {
+  margin-left: auto;
+  margin-right: 12px;
+  color: #dce9ef;
+  font-size: 11px;
+  letter-spacing: .09em;
+  border: 1px solid #7797b4;
+  padding: 6px 10px;
+}
+
+.legacy-header.reference-header {
+  flex: 0 0 70px;
+  position: relative;
+  padding: 10px 0 10px calc(2.5vw + 103px);
+}
+
+.reference-header-bar {
+  width: calc(95vw - 103px);
+  height: 50px;
+  padding-right: 132.523px;
+  background: #000 url("/assets/legacy/header-fill.png") repeat-x;
+  display: flex;
+  align-items: center;
+}
+
+.reference-header-logo,
+.reference-header-mark {
+  position: absolute;
+  top: 10px;
+  display: block;
+  height: 50px;
+  object-fit: fill;
+}
+
+.reference-header-logo { left: 2.5vw; width: 103px; }
+.reference-header-mark { right: 2.5vw; width: 126px; }
+
+.reference-header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+.reference-header-title strong {
+  display: block;
+  font-size: 18.6667px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.reference-header-title span {
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.reference-header-code {
+  position: absolute;
+  right: auto;
+  left: calc(97.5vw - 132.523px);
+  width: 132.523px;
+  bottom: 1px;
+  color: #999;
+  font-size: 8px;
+  line-height: 9px;
+}
+
+.legacy-stage {
+  width: 100%;
+  min-height: 0;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 0;
+  overflow: hidden;
+}
+
+.legacy-sidebar {
+  width: 260px;
+  height: 100%;
+  min-height: 0;
+  border: 1px solid #b2cee3;
+  align-self: stretch;
+  position: relative;
+  padding-top: 18px;
+  background: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.campus-name {
+  min-height: 40px;
+  padding: 0 2px;
+  color: #b4161b;
+  font-size: 29px;
+  font-weight: 700;
+  text-shadow: 0 0 6px #b7b7b7;
+  display: flex;
+  align-items: center;
+}
+
+.account-badge {
+  width: max-content;
+  margin: 0 auto 34px;
+  background: #75aad2;
+  border: 3px double #bfe1f3;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+}
+
+.legacy-nav {
+  border-top: 1px solid #d9dec0;
+}
+
+.legacy-nav a,
+.legacy-nav button {
+  display: block;
+  width: 100%;
+  min-height: 32px;
+  border: 0;
+  border-bottom: 1px solid #d9dec0;
+  background: #fff;
+  color: var(--nav-text);
+  text-decoration: none;
+  text-align: left;
+  padding: 8px 16px 7px 58px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.legacy-nav a:hover,
+.legacy-nav button:hover,
+.legacy-nav a.active {
+  color: #31485c;
+  background: #f8fafb;
+}
+
+.legacy-nav a.active {
+  box-shadow: inset 0 -3px 0 #7ca7d0;
+}
+
+.sidebar-code {
+  color: #b1b1b1;
+  font-size: 9px;
+  text-align: right;
+  padding: 4px 6px;
+}
+
+.legacy-content {
+  min-width: 0;
+  padding-right: 18px;
+  padding-bottom: 32px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.section-title {
+  height: 41px;
+  margin: 0;
+  background: var(--blue);
+  color: #fff;
+  border: 1px solid #9bb7ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  line-height: 1;
+}
+
+.legacy-panel {
+  border: 1px solid #b8b8b8;
+  min-height: 170px;
+  background: #fff;
+}
+
+.notices-panel { padding: 18px 20px; }
+.notice-row { border-bottom: 1px solid #9bb7ce; padding: 0 8px 15px; margin-bottom: 16px; }
+.notice-row:last-child { border-bottom: 0; }
+.notice-row h2 { font-size: 16px; margin: 0 0 4px; color: #345e85; }
+.notice-row time { font-size: 11px; color: #777; }
+.notice-row p { font-size: 13px; line-height: 1.45; }
+.empty-message { text-align: center; color: #777; margin-top: 55px; }
+
+.kardex-controls {
+  min-height: 132px;
+  background: #efefef;
+  display: grid;
+  grid-template-columns: 150px 115px 130px 130px minmax(200px, 1fr) 110px;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 12px;
+  margin: 9px 0 32px;
+  font-size: 12px;
+}
+
+.kardex-controls strong { font-size: 12px; }
+.kardex-controls label { display: flex; gap: 4px; align-items: center; }
+.kardex-controls select { min-width: 190px; height: 29px; }
+
+.table-scroll { width: 100%; overflow-x: auto; }
+.legacy-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border-blue);
+  font-size: 12px;
+  color: #141414;
+}
+
+.legacy-table th,
+.legacy-table td {
+  border: 1px solid var(--border-blue);
+  padding: 3px 4px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.legacy-table th {
+  background: #9fb9d2;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.legacy-table tbody tr:nth-child(odd) { background: #d5e5e6; }
+.legacy-table tbody tr:nth-child(even) { background: #f7fbfc; }
+.legacy-table td:nth-child(3) { text-align: left; }
+.legacy-table .empty-cell { padding: 22px; text-align: center; color: #666; background: #fff; }
+.tick-counter { font-size: 12px; margin: 9px 0; }
+
+.legacy-footer {
+  min-height: 54px;
+  margin-top: 30px;
+  border-top: 1px solid #b2cee3;
+  color: #4c6f8c;
+  padding: 11px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3px;
+  font-size: 10px;
+}
+
+.legacy-footer strong { letter-spacing: .08em; }
+
+.data-sheet { border: 1px solid var(--border-blue); margin-top: 10px; max-width: 850px; }
+.data-sheet div { display: grid; grid-template-columns: 220px 1fr; min-height: 34px; border-bottom: 1px solid #a9c0d5; }
+.data-sheet div:last-child { border-bottom: 0; }
+.data-sheet strong { background: var(--table-blue); padding: 8px 10px; }
+.data-sheet span { padding: 8px 12px; background: #f8fbfc; }
+
+.admission-proof {
+  width: 1240px;
+  max-width: calc((100% - 18px) / .74);
+  min-height: 680px;
+  margin: 12px 0 34px;
+  color: #000;
+  background: #fff;
+  border-bottom: 1px solid #afbdc4;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  zoom: .74;
+}
+
+.admission-proof-caption {
+  margin: 0 0 9px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.admission-proof-header {
+  border-top: 4px solid #aaa;
+  border-bottom: 5px double #9fa9ad;
+  padding: 10px 0 6px;
+  text-align: center;
+}
+
+.admission-proof-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 62px;
+}
+
+.admission-proof-brand img {
+  width: 116px;
+  height: 62px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.admission-proof-brand strong {
+  font-family: "Arial Narrow", "Liberation Sans Narrow", Arial, Helvetica, sans-serif;
+  font-size: 43px;
+  font-weight: 700;
+  letter-spacing: -1.8px;
+  line-height: 45px;
+}
+
+.admission-proof-header h2 {
+  margin: 10px 0 0;
+  font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: .1px;
+}
+
+.admission-proof-applicant-frame {
+  display: grid;
+  grid-template-columns: 1fr 184px;
+  gap: 5px;
+  margin: 6px 3px 0;
+  border-bottom: 5px solid #9fa9ad;
+}
+
+.admission-proof-applicant-panel {
+  border: 1px solid #9fa9ad;
+  min-height: 190px;
+}
+
+.admission-proof-card-title {
+  height: 79px;
+  border-bottom: 1px solid #9fa9ad;
+  padding: 28px 8px 0;
+  text-align: center;
+  color: #f00;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.admission-proof-identity-row {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  height: 33px;
+  align-items: end;
+}
+
+.admission-proof-identity-row strong {
+  height: 27px;
+  border: 1px solid #111;
+  padding: 3px 6px 2px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.admission-proof-identity-row span {
+  height: 27px;
+  border-bottom: 2px solid #111;
+  padding: 3px 9px 2px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.admission-proof-photo-slot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 184px;
+  height: 190px;
+  border: 3px solid #b7c8d1;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.admission-proof-photo-slot span {
+  color: #6c7b82;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.admission-proof-photo-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admission-proof-photo-slot input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.admission-proof-photo-slot .admission-proof-photo-status {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  padding: 2px 5px;
+  border: 1px solid #66757c;
+  background: rgba(255, 255, 255, .9);
+  color: #34444c;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.admission-proof-photo-error {
+  margin: 6px 3px 0;
+}
+
+.admission-proof-alert {
+  margin: 8px 0 15px;
+  color: #f00;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.admission-proof-copy {
+  margin: 0 0 13px;
+  font-family: Courier, "Courier New", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: .05px;
+}
+
+.admission-proof-button {
+  display: block;
+  min-width: 188px;
+  height: 30px;
+  margin: 8px auto 18px;
+  border: 1px solid #8d8d8d;
+  border-radius: 3px;
+  color: #111;
+  background: linear-gradient(#f7f7f7, #d5d5d5);
+  box-shadow: inset 0 1px 0 #fff, 0 1px 1px rgba(0, 0, 0, .25);
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  cursor: default;
+}
+
+.admission-proof h3 {
+  margin: 0 0 18px 0;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.admission-proof-pay {
+  min-width: 163px;
+  margin-bottom: 42px;
+}
+
+.admission-proof-questionnaire-copy {
+  margin-bottom: 16px;
+}
+
+.admission-proof-questionnaire {
+  min-width: 333px;
+  margin: 0 0 20px 2px;
+}
+
+.admission-proof-divider {
+  height: 5px;
+  border-top: 3px solid #aab6bd;
+  border-bottom: 1px solid #aab6bd;
+  margin: 0 0 12px;
+}
+
+.personal-admission-sheet {
+  width: calc(100% - 10px);
+  margin: 0 5px;
+  border-bottom: 3px solid #aab6bd;
+  padding: 0 0 8px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.personal-admission-row {
+  display: grid;
+  grid-template-columns: 217px minmax(0, 1fr);
+  min-height: 31px;
+  align-items: end;
+}
+
+.personal-admission-row strong {
+  height: 25px;
+  border: 1px solid #111;
+  padding: 3px 7px 1px;
+  color: #000;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.personal-admission-row span {
+  height: 25px;
+  border-bottom: 2px solid #222;
+  padding: 3px 8px 1px;
+  color: #111;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.admission-proof-print {
+  display: block;
+  width: 125px;
+  height: 27px;
+  margin: 18px 13px 0 auto;
+  border: 1px solid #7fa2b5;
+  border-radius: 3px;
+  color: #00324a;
+  background: linear-gradient(#eefcff, #d3eef7);
+  box-shadow: inset 0 1px 0 #fff;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: default;
+}
+
+.page-status { padding: 34px; text-align: center; color: #666; }
+.message { margin: 10px 0; border: 1px solid; padding: 8px 10px; font-size: 13px; }
+.message.error, .login-error { border-color: #b34a4a; background: #fff1f1; color: #8a1f1f; }
+.message.success { border-color: #5f8a5f; background: #eef8ee; color: #2e612e; }
+
+.admin-content { padding-bottom: 40px; }
+.admin-intro { border: 1px solid #b8cde0; background: #eef5fa; padding: 12px; margin: 10px 0; }
+.admin-menu-grid { display: grid; grid-template-columns: repeat(2, minmax(220px, 360px)); gap: 10px; }
+.admin-menu-grid a { border: 1px solid var(--border-blue); text-decoration: none; color: #222; background: #f8fbfc; }
+.admin-menu-grid strong { display: block; background: var(--table-blue); padding: 8px; }
+.admin-menu-grid span { display: block; padding: 13px 8px; font-size: 12px; }
+.subsection-title { color: #294f72; font-size: 16px; margin: 18px 0 7px; border-bottom: 1px solid #8aa9c5; padding: 5px 2px; }
+.subsection-heading { display: flex; align-items: end; justify-content: space-between; }
+.subsection-heading .subsection-title { flex: 1; margin-right: 14px; }
+.breadcrumbs { font-size: 12px; margin: 8px 0 14px; }
+.table-link { white-space: nowrap; }
+.row-actions { display: flex; gap: 4px; justify-content: center; }
+.row-actions button, .legacy-table button { border: 1px solid #7996b1; background: #fff; color: #264e73; cursor: pointer; font-size: 11px; padding: 3px 7px; }
+
+.site-shell.login-shell {
+  width: 100%;
+  min-width: 1024px;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  -webkit-font-smoothing: auto;
+}
+
+.login-stage {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: calc(100vh - 70px);
+  position: relative;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 0;
+}
+
+.login-stage .login-panel {
+  width: 260px;
+  height: 439.29px;
+  min-height: 439.29px;
+  position: relative;
+  align-self: start;
+  border-width: 2px 2px 1px 1px;
+  border-style: solid;
+  border-color: #a8ccea #a8ccea #bbd7ee #bbd7ee;
+  padding: 5px 0 0;
+  background: #fff;
+}
+
+.login-panel .campus-name {
+  width: 175px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0;
+  display: block;
+  margin-bottom: -1px;
+  object-fit: fill;
+}
+
+.login-panel form { height: 257.3px; position: relative; padding: 0; color: #993333; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 10.6667px; line-height: 16px; }
+.login-panel label { position: absolute; left: 0; height: 18px; margin: 0; color: #993333; font-size: 10.6667px; line-height: 16px; }
+.login-panel label[for="username"] { top: 1px; }
+.login-panel label[for="password"] { top: 46.17px; }
+.login-panel input { position: absolute; left: 1px; width: 117.33px; height: 25.18px; background: #6fa8d7; border: 3px double #bbd7ee; color: #fff; font-family: inherit; font-size: 10.6667px; font-weight: 700; line-height: 16px; padding: 1.6px; }
+.login-panel input#username { top: 20px; }
+.login-panel input#password { top: 65.16px; }
+.login-panel input:hover,
+.login-panel input:focus { border: 3px solid #1e486a; outline: 0; }
+.login-button,
+.login-secondary-button { width: 100px; min-height: 25px; padding: 1.5px; font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 15px; border: 0; border-radius: 0; background: transparent url("/assets/legacy/button-default.png") no-repeat; box-shadow: none; }
+.login-panel .login-button,
+.login-panel .login-secondary-button { height: 25px; min-height: 25px; padding: 1.5px; border: 0; border-radius: 0; background: transparent url("/assets/legacy/button-default.png") no-repeat; box-shadow: none; }
+.login-panel .login-button:hover,
+.login-panel .login-secondary-button:hover { background-image: url("/assets/legacy/button-hover.png"); color: rgb(40, 40, 202); }
+.login-button { position: absolute; top: 92.34px; left: 1px; margin: 0; }
+.login-utilities { position: absolute; top: 154.33px; left: 1px; width: 197.32px; height: 101px; }
+.login-utility-label { position: absolute; top: 0; left: 0; height: 18px; color: #993333; font-size: 10.6667px; line-height: 16px; }
+.login-secondary-button { position: absolute; top: 17px; left: 0; }
+.forgot-password-button { position: absolute; top: 60px; left: 0; width: 195.32px; height: 41px; margin: 0; padding: 4px 8px; border: 1px solid #343a40; border-radius: 3.2px; background: #343a40; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 14px; font-weight: 400; line-height: 21px; cursor: pointer; display: block; text-decoration: none; }
+.forgot-password-button:hover { border-color: #1d2124; background: #23272b; color: #fff; text-decoration: none; }
+.forgot-password-button:focus-visible { outline: 0; box-shadow: 0 0 0 3.2px rgba(82, 88, 93, .5); }
+.login-error { margin: 18px 3px; padding: 7px; font-size: 12px; }
+.login-help-text { width: 257px; height: 72px; margin: 31px 1px 0; color: #de1423; font-size: 12px; font-weight: 700; line-height: 18px; }
+.login-ticks { margin: 19px 2px 0; color: #993333; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; font-size: 10.6667px; line-height: 16px; }
+.login-code { position: absolute; left: 0; bottom: -13px; width: 260px; color: #a8a8a8; font-size: 8px; line-height: 12px; text-align: right; white-space: nowrap; }
+.login-left-footer { position: absolute; left: 10px; bottom: 12.5px; width: 240px; color: #006699; font-size: 10.6667px; line-height: normal; text-align: center; display: flex; flex-direction: column; }
+.login-welcome { grid-column: 2; height: 100%; min-width: 0; overflow-y: auto; padding: 0 0 24px; text-align: center; }
+.module-name { font-size: 16px; line-height: normal; margin: 16px 0 0; }
+.login-message { height: 82.5px; margin: 24px 0 0; background: #fff; color: #333; font-size: 24px; font-weight: 400; line-height: normal; }
+.login-notice { width: calc(76% + 17.2px); margin: 27px auto 0; padding: 2px 10px; text-align: center; background: #cee7ff; border: 1px solid #ccc; border-radius: 10px; box-shadow: 5px 5px 5px #666; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 11px; }
+.login-notice h3 { height: 19px; margin: 13.695px 0; text-align: center; font-size: 16.5px; font-weight: 700; line-height: normal; }
+.login-notice h3.notice-copy { height: auto; margin: 12.87px 0; font-size: 12.87px; font-weight: 700; line-height: normal; text-align: justify; }
+.notice-copy a { color: #0000ee; }
+.login-notice h3.notice-signature { height: auto; margin: 12.87px 0; text-align: center; font-size: 12.87px; font-weight: 700; line-height: normal; }
+.login-notice .notice-signature a { padding: 4px 45px; background: #d037a7; color: #fff; display: inline-block; font: inherit; text-decoration: none; }
+
+.scholarship-block { width: 65.4752%; margin: 15.5px auto 0; text-align: left; }
+.scholarship-block > h3 { height: 38.5px; margin: 0; padding: 10px; background: #20acb8; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 400; line-height: normal; }
+.scholarship-content { height: 210px; margin-top: 2px; display: grid; grid-template-columns: 192px minmax(0, 1fr); gap: 0; }
+.scholarship-image-space { height: 210px; padding: 10px; }
+.scholarship-image-space img { width: 170px; height: 190px; display: block; }
+.scholarship-copy { height: 210px; padding: 22px 10px 10px; color: #000; font-size: 14px; line-height: normal; }
+.scholarship-copy p { margin: 14px 0; }
+.scholarship-copy p:last-child { white-space: nowrap; }
+.scholarship-copy a { color: #0000ee; }
+
+.reference-compatibility { width: 94.5%; margin: 14px auto 0; padding: 0 0 40px; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 9px; line-height: normal; text-align: center; }
+.siiuam-logo { width: 229px; height: 199px; display: block; margin: 0 auto; }
+.compatibility-title { margin: 16px 0; font-size: 16px; }
+.compatibility-code { color: #999; font-size: 8px; }
+.compatibility-table { width: 80%; margin: 0 auto; border-spacing: 2px; color: #000; font: 9px Arial, Helvetica, sans-serif; text-align: left; }
+.compatibility-table img { display: block; width: 20px; height: 20px; }
