@@ -15,7 +15,7 @@ export function StudentLayout() {
 
   return (
     <div className="site-shell">
-      <Header />
+      <Header reference />
       <div className="legacy-stage">
         <StudentSidebar student={student} />
         <main className="legacy-content">
@@ -28,4 +28,3 @@ export function StudentLayout() {
     </div>
   );
 }
-
