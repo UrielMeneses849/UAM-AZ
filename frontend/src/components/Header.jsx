@@ -25,7 +25,6 @@ export function Header({ admin = false, reference = false }) {
           <strong>Sistema de Información Escolar</strong>
           <span>{admin ? "Administración del Portal Académico" : "Portal Académico"}</span>
         </div>
-        <div className="simulation-mark">SIMULACIÓN ACADÉMICA · NO OFICIAL</div>
       </div>
     </header>
   );
