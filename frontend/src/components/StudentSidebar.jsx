@@ -22,7 +22,6 @@ export function StudentSidebar({ student }) {
         ))}
         <button type="button" onClick={logout}>Terminar Sesión</button>
       </nav>
-      <div className="sidebar-code">PORTAL/SIM/NOOFICIAL</div>
-    </aside>
+      </aside>
   );
 }
